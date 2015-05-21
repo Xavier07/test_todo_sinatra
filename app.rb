@@ -16,7 +16,7 @@ get '/' do
 	erb:index
 end
 
-post '/' do
+post '/delete' do
 	delete = Testodo.find(tache: 'test')
 	delete.all
 end

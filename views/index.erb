@@ -3,7 +3,7 @@
 	<h1>Nom de la tache : <%= t.taches %></h1>
 	<p>Date d'échange : <%= t.echeance %><p>
 	<p>Priorité : <%= t.priorite %><p>
-	<form action="/" method="post">
+	<form action="/delete" method="post">
 		<input type="submit" value="Supprimer"/>
 	</form>
 <%end%>
