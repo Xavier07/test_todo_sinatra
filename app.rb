@@ -18,7 +18,7 @@ end
 
 post '/' do
 	delete = Testodo.find(tache: 'test')
-	delete.destroy(1)
+	delete.all
 end
 
 post '/' do

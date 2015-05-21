@@ -1,12 +1,13 @@
 
 <% for t in @testodos %>
-	<h1><%= t.taches %></h1>
-	<p><%= t.echeance %><p>
+	<h1>Nom de la tache : <%= t.taches %></h1>
+	<p>Date d'échange : <%= t.echeance %><p>
+	<p>Priorité : <%= t.priorite %><p>
 	<form action="/" method="post">
 		<input type="submit" value="Supprimer"/>
 	</form>
 <%end%>
-
+</br>
 <form action="/" method="post">
 	<label for="tache">Tache à effectuer</label>
 	<input type="text" name="testodos[taches]" id="tache"/></br>
@@ -20,7 +21,6 @@
 	<label for="haute">Basse</label>
 	<input type="radio" value="basse" name="testodos[priorite]" id="basse"/></br>
 	<label for="echeance">Date butoir</label>
-
 	<input type="date" name="testodos[echeance]" id="echeance"/></br>
 	<input type="submit" value="Envoyer"/></br>
 
