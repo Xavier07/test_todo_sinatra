@@ -1,3 +1,7 @@
+<% for t in @testodos %>
+	<p><%= t.taches %></p>
+<%end%>
+
 <form action="/" method="post">
 	<label for="tache">Tache à effectuer</label>
 	<input type="text" name="testodos[taches]" id="tache"/></br>

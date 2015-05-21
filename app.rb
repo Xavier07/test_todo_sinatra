@@ -7,6 +7,17 @@ ActiveRecord::Base.establish_connection(
 	)
 ActiveRecord::Base.default_timezone=:local
 
+class Testodo < ActiveRecord::Base
+end
+
 get '/' do 
+	 @testodos = Testodo.all()
+     @title = "Todo" 
 	erb:index
+end
+
+post '/' do
+	@to = Testodo.new(params[:testodos])
+	@to.save
+	redirect '/'
 end
