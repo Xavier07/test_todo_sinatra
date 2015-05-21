@@ -17,6 +17,11 @@ get '/' do
 end
 
 post '/' do
+	delete = Testodo.find(tache: 'test')
+	delete.destroy(1)
+end
+
+post '/' do
 	@to = Testodo.new(params[:testodos])
 	@to.save
 	redirect '/'

@@ -1,5 +1,10 @@
+
 <% for t in @testodos %>
-	<p><%= t.taches %></p>
+	<h1><%= t.taches %></h1>
+	<p><%= t.echeance %><p>
+	<form action="/" method="post">
+		<input type="submit" value="Supprimer"/>
+	</form>
 <%end%>
 
 <form action="/" method="post">
